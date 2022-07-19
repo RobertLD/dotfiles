@@ -2,8 +2,10 @@
 set $mod Mod4
 
 # Set background image name
-set $bg 6.png
+set $bg 9.png
 
+# Always start pulse audio
+exec_always start-pulseaudio-x11
 
 # Set Font
 font pango: Hack 9
@@ -166,13 +168,13 @@ client.background       #ffffff
 exec_always --no-startup-id xrdb ~/.Xresources
 
 # Apply the last colorscheme generated without changing the background by using -n 
-exec_always wal -i ~/Pictures/Wal/$bg -a 60  
+exec_always wal -i ~/Pictures/Wal/$bg -a 80 --saturate 1 
 # Apply a background different than the one used by wal
 # If this isn't needed, remove it and remove -n flag from the above command
 exec --no-startup-id feh --bg-fill ~/Pictures/Wal/$bg
 
 #Utilize Compton
-exec --no-startup-id picom
+exec --no-startup-id picom --blur-method dual_kawase --blur-strength 2 --backend glx --experimental-backends
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -187,4 +189,6 @@ bindsym XF86AudioPrev exec playerctl previous
 
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
+
+
 
