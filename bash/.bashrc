@@ -124,9 +124,8 @@ export PATH="$HOME/.local/bin:$PATH"
 export KRB5CCNAME=DIR:~/.krb5/tmp
 
 #Reload KRB on restart
-kinit rderienzo -k -t ~/.krb5/rderienzo.keytab
 export KRB5CCNAME=DIR:~/.krb5/tmp
-
+kinit rderienzo -k -t ~/.krb5/rderienzo.keytab
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -143,3 +142,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export PATH="$PATH:/opt/mssql-tools18/bin"
+export PATH="$PATH:/opt/mssql-tools/bin"

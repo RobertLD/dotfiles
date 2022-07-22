@@ -16,7 +16,7 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvt 
 
 #Set gaps
-gaps inner 5
+gaps inner 7
 
 #Close window
 bindsym $mod+Shift+q kill
@@ -190,5 +190,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
 
+# Screenshot Keybinds
 
+bindsym $mod+Shift+s exec --no-startup-id maim --select -o | xclip -selection clipboard -t image/png
 
