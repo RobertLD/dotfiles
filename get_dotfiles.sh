@@ -13,4 +13,7 @@ cp ~/.vimrc ./vim/.vimrc
 # Get XResources
 cp ~/.Xresources ./Xresources/.Xresources
 
+#Get VMWare settings
+cp /etc/vmware/viewagent-custom.conf ./vmware/viewagent-custom.conf
+
 echo "Done copying dotfiles!."
