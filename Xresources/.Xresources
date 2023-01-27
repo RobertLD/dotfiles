@@ -1,4 +1,4 @@
-*.font: xft:Overpass Mono Bold:size=12
+*.font: xft:FuraCode Nerd Font Mono:size=13
 
 Xft.dpi:                        96
 Xft.antialias:                  1
@@ -22,5 +22,3 @@ URxvt.perl-ext:	 		default,matcher
 URxvt.url-launcher:             firefox
 URxvt.matcher.button: 		1
 
-Emacs.font: Overpass Mono:size=13
-Emacs.fontBackend: xft

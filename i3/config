@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # Set background image name
-set $bg 9.png
+set $bg 9.png 
 
 # Always start pulse audio
 exec_always start-pulseaudio-x11
@@ -13,7 +13,7 @@ font pango: Hack 9
 floating_modifier $mod
 
 # Open new terminal
-bindsym $mod+Return exec urxvt 
+bindsym $mod+Return exec urxvt
 
 #Set gaps
 gaps inner 7
@@ -73,6 +73,9 @@ bindsym $mod+a focus parent
 
 # Focus the child container
 #bindsym $mod+d focus child
+
+# Open notes application(obsidian)
+bindsym $mod+n exec ~/Repos/appimages/Obsidian.AppImage
 
 # Workspace name variables
 set $ws1 "1: Code"
@@ -174,7 +177,7 @@ exec_always wal -i ~/Pictures/Wal/$bg -a 80 --saturate 1
 exec --no-startup-id feh --bg-fill ~/Pictures/Wal/$bg
 
 #Utilize Compton
-exec --no-startup-id picom --blur-method dual_kawase --blur-strength 2 --backend glx --experimental-backends
+exec_always --no-startup-id picom  
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
